@@ -1,0 +1,8 @@
+user:
+    name: johrun
+    uid: 1000
+    group: johrun
+    shell: /usr/bin/zsh
+    log:
+        dir: log
+        rotate: 8

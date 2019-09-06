@@ -3,6 +3,7 @@
   become: yes
   roles:
     - {role: user, tags: ['user']}
+    - {role: terminal_tools, tags: ['terminal_tools']}
   vars_prompt:
     - name: user_password
       prompt: 'Enter desired user password'

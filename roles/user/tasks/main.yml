@@ -1,7 +1,14 @@
 ---
+- name: add the sudo group
+  group: 
+    name: sudo
+    state: present
+  tags:
+    - user
+ 
 - name: Create user group
   group:
-    name: '{{ user.group }} sudo'
+    name: '{{ user.group }}'
     state: present
   tags:
     - user
@@ -14,7 +21,7 @@
     shell: '{{ user.shell }}'
     update_password: on_create
     uid: '{{ user.uid }}'
-    groups: uucp sudo
+    groups: uucp,sudo
     append: yes
   tags:
     - user

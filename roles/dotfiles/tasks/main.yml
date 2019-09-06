@@ -3,3 +3,4 @@
   command: $PWD/roles/dotfiles/scripts/setup_dotfiles.sh creates=/home/johrun/.dotfiles
   become: yes
   become_user: johrun
+  become_method: sudo

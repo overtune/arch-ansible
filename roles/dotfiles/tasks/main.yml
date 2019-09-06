@@ -1,5 +1,5 @@
 ---
 - name: Setup user dotfiles
-  command: ../scripts/setup_dotfiles.sh creates=/home/johrun/.dotfiles
+  command: $PWD/roles/dotfiles/scripts/setup_dotfiles.sh creates=/home/johrun/.dotfiles
   become: yes
   become_user: johrun

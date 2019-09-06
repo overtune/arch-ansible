@@ -1,0 +1,75 @@
+---
+- name: Install i3
+  pacman:
+    name:
+      - i3-wm
+      - i3blocks
+      - i3lock
+      - i3status
+    state: present
+
+- name: Install arandr
+  pacman:
+    name:
+      - arandr
+    state: present
+
+- name: Install xorg
+  pacman:
+    name:
+      - xorg
+    state: present
+
+- name: Install lxappearance
+  pacman:
+    name:
+      - lxappearance
+    state: present
+
+- name: Install thunar
+  pacman:
+    name:
+      - thunar
+    state: present
+
+- name: Install arc-gtk-theme
+  pacman:
+    name:
+      - arc-gtk-theme
+    state: present
+
+- name: Install moka-icon-theme 
+  pacman:
+    name:
+      - moka-icon-theme 
+    state: present
+
+- name: Install rofi 
+  pacman:
+    name:
+      - rofi 
+    state: present
+
+- name: Install compton 
+  pacman:
+    name:
+      - compton 
+    state: present
+
+- name: Install terminator
+  pacman:
+    name:
+      - terminator
+    state: present
+
+- name: Install firefox-developer-edition
+  pacman:
+    name:
+      - firefox-developer-edition
+    state: present
+
+- name: Install flatpak 
+  pacman:
+    name:
+      - flatpak 
+    state: present

@@ -4,21 +4,15 @@
     name:
       - vim
     state: present
-    tags:
-      - terminal_tools
 
 - name: Install Git
   pacman:
     name:
       - git
     state: present
-    tags:
-      - terminal_tools
 
 - name: Install Git
   pacman:
     name:
       - terminator
     state: present
-    tags:
-      - terminal_tools

@@ -1,0 +1,5 @@
+---
+- name: Setup user dotfiles
+  script: ../scripts/setup_dotfiles.sh 
+  become: yes
+  become_user: johrun

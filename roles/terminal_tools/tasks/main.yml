@@ -58,3 +58,9 @@
     name:
       - unzip
     state: present
+
+- name: Install fzf
+  pacman:
+    name:
+      - fzf
+    state: present

@@ -6,7 +6,7 @@
   tags:
     - user
 
- - name: Allow 'wheel' group to have sudo previlegies
+- name: Allow 'wheel' group to have sudo previlegies
   lineinfile:
     dest: /etc/sudoers
     state: present

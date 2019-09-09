@@ -4,3 +4,9 @@
     name:
       - base-devel
     state: present
+
+- name: Install cmake 
+  pacman:
+    name:
+      - cmake 
+    state: present

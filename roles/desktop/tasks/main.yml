@@ -20,6 +20,12 @@
       - xorg-server
     state: present
 
+- name: Install xorg-xinit
+  pacman:
+    name:
+      - xorg-xinit
+    state: present
+
 - name: Install lxappearance
   pacman:
     name:

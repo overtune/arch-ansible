@@ -23,9 +23,3 @@
   args:
     creates: $HOME/.vim/plugged
   become_user: johrun
-
-# - name: Install YouCompleteMe 
-#   command: cd $HOME/.vim/plugged/YouCompleteMe && python3 install.py
-#   args:
-#     creates: $HOME/.vim/plugged
-#   become_user: johrun

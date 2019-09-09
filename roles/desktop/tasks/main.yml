@@ -17,7 +17,7 @@
 - name: Install xorg
   pacman:
     name:
-      - xorg
+      - xorg-server
     state: present
 
 - name: Install lxappearance

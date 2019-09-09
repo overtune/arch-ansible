@@ -19,7 +19,7 @@
   become_user: johrun
 
 - name: Install Vim plugins
-  command: vim -E -s -c "source $HOME/.vimrc" -c PluginInstall -c qa
+  command: vim -E -s -c "source $HOME/.vimrc" -c PlugInstall -c qa
   args:
     creates: $HOME/.vim/plugged
   become_user: johrun

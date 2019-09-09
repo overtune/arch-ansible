@@ -1,11 +1,19 @@
 ---
-- name: add the sudo group
-  group: 
-    name: sudo
+- name: Make sure we have a 'wheel' group
+  group:
+    name: wheel
     state: present
   tags:
     - user
- 
+
+ - name: Allow 'wheel' group to have sudo previlegies
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) ALL'
+    validate: 'visudo -cf %s'
+
 - name: Create user group
   group:
     name: '{{ user.group }}'
@@ -21,7 +29,7 @@
     shell: '{{ user.shell }}'
     update_password: on_create
     uid: '{{ user.uid }}'
-    groups: uucp,sudo
+    groups: wheel
     append: yes
   tags:
     - user

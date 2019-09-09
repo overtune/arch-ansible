@@ -7,7 +7,7 @@
   become_user: johrun
 
 - name: Checks out the config files to home dir. 
-  command: alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' && config checkout 
+  command: /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout 
   args:
     creates: $HOME/.vimrc
   become_user: johrun

@@ -1,5 +1,7 @@
 ---
-- name: Setup user dotfiles
-  command: cd $HOME && git clone --bare https://github.com/overtune/dotfiles.git $HOME/.dotfiles && alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' && config checkout creates=/home/johrun/.dotfiles
-  become: yes
+- name: Clone dotfiles repo
+  git:
+    repo: https://github.com/overtune/dotfiles.git
+    dest: $HOME/.dotfiles
+    bare: yes
   become_user: johrun

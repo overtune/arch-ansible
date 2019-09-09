@@ -17,3 +17,11 @@
   args:
     creates: $HOME/.vimrc
   become_user: johrun
+
+- name: Install Vim plugins
+  command: vim +PlugInstall +qall +silent
+  args:
+    created: $HOME/
+  become_user: johrun
+
+# cd ~/.vim/plugged/YouCompleteMe && python3 install.py 

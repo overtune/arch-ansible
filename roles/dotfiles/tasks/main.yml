@@ -21,7 +21,7 @@
 - name: Install Vim plugins
   command: vim +PlugInstall +qall +silent
   args:
-    created: $HOME/.vim/plugged
+    creates: $HOME/.vim/plugged
   become_user: johrun
 
 # cd ~/.vim/plugged/YouCompleteMe && python3 install.py 

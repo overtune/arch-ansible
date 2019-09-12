@@ -1,0 +1,20 @@
+---
+- name: Create the user font folder 
+  file:
+    path: $HOME/.fonts 
+    state: directory
+    mode: '0755'
+  become_user: johrun
+
+- name: Download fontawesome 
+  get_url:
+    url: https://github.com/FortAwesome/Font-Awesome/raw/v4.7.0/fonts/fontawesome-webfont.ttf
+    dest: $HOME/.fonts
+  become_user: johrun
+
+- name: Install Ubuntu font
+  pacman:
+    name:
+      - ttf-ubuntu-font-family
+    state: present
+

@@ -7,6 +7,7 @@
     - {role: terminal_tools, tags: ['terminal_tools']}
     - {role: desktop, tags: ['desktop']}
     - {role: dotfiles, tags: ['dotfiles']}
+    - {role: fonts, tags: ['fonts']}
   vars_prompt:
     - name: user_password
       prompt: 'Enter desired user password'

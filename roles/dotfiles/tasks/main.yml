@@ -23,3 +23,10 @@
   args:
     creates: $HOME/.vim/plugged
   become_user: johrun
+
+- name: Download wallpaper 
+  command: wget -P $HOME/Pictures/ -O wallpaper.jpg https://wallpapersite.com/images/wallpapers/annapurna-massif-3840x2160-himalayas-nepal-mountains-sunrise-minimal-8112.jpg
+  args:
+    creates: $HOME/Pictures/wallpaper.jpg
+  become_user: johrun
+

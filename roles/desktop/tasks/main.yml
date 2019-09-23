@@ -78,4 +78,6 @@
   pacman:
     name:
       - flatpak 
-    state: present
+
+- name: Copy run-rofi script
+  copy: src=run-rofi.sh dest=$HOME/run-rofi.sh

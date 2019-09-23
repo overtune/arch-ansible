@@ -1,4 +1,14 @@
 ---
+# - name: Install freetype2
+#   pacman:
+#     name: freetype2
+#     state: present
+
+# - name: Install fontconfig
+#   pacman:
+#     name: fontconfig
+#     state: present
+
 - name: Create the user font folder 
   file:
     path: $HOME/.fonts 

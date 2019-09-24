@@ -81,3 +81,4 @@
 
 - name: Copy run-rofi script
   copy: src=run-rofi.sh dest=$HOME/run-rofi.sh
+  become_user: johrun

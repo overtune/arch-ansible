@@ -79,6 +79,20 @@
     name:
       - flatpak 
 
-- name: Copy run-rofi script
-  copy: src=run-rofi.sh dest=$HOME/run-rofi.sh
+- name: Create the rofi folder 
+  file:
+    path: $HOME/gui/rofi 
+    state: directory
+    mode: '0755'
+  become_user: johrun
+
+- name: Create the rofi theme folder 
+  file:
+    path: $HOME/gui/rofi/themes
+    state: directory
+    mode: '0755'
+  become_user: johrun
+
+- name: Copy rofi theme
+  copy: src=rofi-nord.rasi dest=$HOME/gui/rofi/themes/rofi-nord.rasi
   become_user: johrun

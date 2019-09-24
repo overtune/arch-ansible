@@ -38,6 +38,13 @@
     mode: '0755'
   become_user: johrun
 
+- name: Create the gui folder 
+  file:
+    path: $HOME/gui 
+    state: directory
+    mode: '0755'
+  become_user: johrun
+
 - name: Download wallpaper 
   get_url:
     url: https://wallpapersite.com/images/wallpapers/annapurna-massif-3840x2160-himalayas-nepal-mountains-sunrise-minimal-8112.jpg

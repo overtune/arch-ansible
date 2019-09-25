@@ -74,6 +74,11 @@
       - firefox-developer-edition
     state: present
 
+- name: Install dunst 
+  pacman:
+    name:
+      - dunst 
+
 - name: Install flatpak 
   pacman:
     name:

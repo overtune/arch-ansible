@@ -8,3 +8,8 @@
   flatpak:
     name: https://flathub.org/repo/appstream/com.slack.Slack.flatpakref
     state: present
+
+- name: Install the thunderbird flatpak
+  flatpak:
+    name: https://flathub.org/repo/appstream/org.mozilla.Thunderbird.flatpakref
+    state: present

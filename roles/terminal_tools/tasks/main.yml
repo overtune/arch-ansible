@@ -64,3 +64,9 @@
     name:
       - fzf
     state: present
+
+- name: Install htop
+  pacman:
+    name:
+      - htop
+    state: present

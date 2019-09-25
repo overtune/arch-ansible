@@ -13,3 +13,13 @@
   flatpak:
     name: https://flathub.org/repo/appstream/org.mozilla.Thunderbird.flatpakref
     state: present
+
+- name: Install the postman flatpak
+  flatpak:
+    name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
+    state: present
+
+- name: Install the gitkraken flatpak
+  flatpak:
+    name: https://flathub.org/repo/appstream/com.axosoft.GitKraken.flatpakref
+    state: present

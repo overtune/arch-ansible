@@ -11,12 +11,6 @@
       - git
     state: present
 
-- name: Install zsh
-  pacman:
-    name:
-      - zsh
-    state: present
-
 - name: Install tmux
   pacman:
     name:

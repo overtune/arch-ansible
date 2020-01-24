@@ -46,6 +46,8 @@
     name:
       - python3
     state: present
+  tags:
+    - python3
 
 - name: Install unzip
   pacman:

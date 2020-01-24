@@ -8,6 +8,12 @@
       - i3status
     state: present
 
+- name: Install lxdm
+  pacman:
+    name:
+      - lxdm
+    state: present
+
 - name: Install arandr
   pacman:
     name:
@@ -101,3 +107,8 @@
 - name: Copy rofi theme
   copy: src=rofi-nord.rasi dest=$HOME/gui/rofi/themes/rofi-nord.rasi
   become_user: johrun
+
+- name: enable service lxdm
+  systemd:
+    name: httpd
+    enabled: yes

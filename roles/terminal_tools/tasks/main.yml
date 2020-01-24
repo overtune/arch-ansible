@@ -64,3 +64,9 @@
     name:
       - htop
     state: present
+
+- name: Install xclip
+  pacman:
+    name:
+      - xclip
+    state: present
